@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@media print {
+
+    body {
+        -webkit-print-color-adjust: exact; /* pour Chrome, Safari */
+        print-color-adjust: exact; /* pour Firefox */
+        
+      }
+
+    .container {
+        width: 210mm; /* Largeur d'une feuille A4 */
+        height: 0; /* Hauteur d'une feuille A4 */
+        padding: 0;
+        margin: 0;
+        
+        
+    }  
+
+    #work-table{
+        margin-top: 20px;
+    }
+    .page-break {
+      page-break-before: always;
+      border-top: 2px solid black;
+    }
+  
+    /* Force the first page to end after the travaux table */
+    #travaux-demandes-table {
+      page-break-after: always;
+    }
+  
+    /* Hide buttons during print */
+    button {
+      display: none;
+    }
+    #print{
+      display: none;
+    }
+  }
+  
